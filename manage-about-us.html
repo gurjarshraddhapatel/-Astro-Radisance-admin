@@ -355,7 +355,7 @@
     </nav>
     <!-- End Navbar -->
 
-    <!-- Manage User -->
+    <!-- Management Home Page   -->
     <div class="container-fluid py-4">
       <!-- Edit User Modal -->
       <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
@@ -421,282 +421,201 @@
         </div>
       </div>
 
-      <!-- Users Table -->
+      <!-- Home Page Sections Table -->
       <div class="row">
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Users List</h6>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">Home Page Sections List</h6>
+                <button type="button" class="btn btn-sm btn-primary" onclick="document.getElementById('homePageSectionForm').scrollIntoView({ behavior: 'smooth', block: 'start' })">
+                  <i class="fas fa-plus me-1"></i> Add New Section
+                </button>
+              </div>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">UserID</th> -->
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Registration
-                        Date</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mobile</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Address</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Change
-                        Password</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Active/Inactive</th>
-                      <th class="text-secondary opacity-7"></th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Section Name</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Title</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Content Preview</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Meta Title</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Focus Keyword</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                      <th class="text-secondary opacity-7">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                     
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">23/04/2024</p>
+                        <p class="text-xs font-weight-bold mb-0">Hero Section</p>
+                        <p class="text-xs text-secondary mb-0">hero-section</p>
                       </td>
                       <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">John Michael</h6>
-                          </div>
-                        </div>
+                        <p class="text-xs font-weight-bold mb-0">Welcome to Our Platform</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">john@creative-tim.com</p>
+                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-2" alt="section-image">
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8900</p>
+                        <p class="text-xs font-weight-bold mb-0" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                          Experience the best platform for your needs...
+                        </p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">123 Main St, City</p>
+                        <p class="text-xs font-weight-bold mb-0">Welcome to Our Platform | Best Services</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">best platform</p>
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR001')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR001" checked
-                            onchange="toggleStatus('USR001', this.checked)">
-                        </div>
+                        <span class="badge badge-sm bg-gradient-success">Active</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR001')">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit section" onclick="editHomePageSection('hero-section')">
                           <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete section" onclick="deleteHomePageSection('hero-section')">
+                          <i class="fas fa-trash"></i> Delete
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">11/01/2024</p>
+                        <p class="text-xs font-weight-bold mb-0">About Section</p>
+                        <p class="text-xs text-secondary mb-0">about-section</p>
                       </td>
                       <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Alexa Liras</h6>
-                          </div>
-                        </div>
+                        <p class="text-xs font-weight-bold mb-0">About Our Company</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">alexa@creative-tim.com</p>
+                        <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-2" alt="section-image">
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8901</p>
+                        <p class="text-xs font-weight-bold mb-0" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                          We are a leading company in our industry...
+                        </p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">456 Oak Ave, City</p>
+                        <p class="text-xs font-weight-bold mb-0">About Us | Company Overview</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">about company</p>
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR002')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR002"
-                            onchange="toggleStatus('USR002', this.checked)">
-                        </div>
+                        <span class="badge badge-sm bg-gradient-success">Active</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR002')">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit section" onclick="editHomePageSection('about-section')">
                           <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete section" onclick="deleteHomePageSection('about-section')">
+                          <i class="fas fa-trash"></i> Delete
                         </a>
                       </td>
                     </tr>
                     <tr>
-                     
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">19/09/2024</p>
+                        <p class="text-xs font-weight-bold mb-0">Services Section</p>
+                        <p class="text-xs text-secondary mb-0">services-section</p>
                       </td>
                       <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Laurent Perrier</h6>
-                          </div>
-                        </div>
+                        <p class="text-xs font-weight-bold mb-0">Our Services</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">laurent@creative-tim.com</p>
+                        <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-2" alt="section-image">
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8902</p>
+                        <p class="text-xs font-weight-bold mb-0" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                          We offer a wide range of services to meet...
+                        </p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">789 Pine Rd, City</p>
+                        <p class="text-xs font-weight-bold mb-0">Our Services | Premium Solutions</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">services</p>
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR003')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR003" checked
-                            onchange="toggleStatus('USR003', this.checked)">
-                        </div>
+                        <span class="badge badge-sm bg-gradient-secondary">Inactive</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR003')">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit section" onclick="editHomePageSection('services-section')">
                           <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete section" onclick="deleteHomePageSection('services-section')">
+                          <i class="fas fa-trash"></i> Delete
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">24/12/2024</p>
+                        <p class="text-xs font-weight-bold mb-0">Testimonials Section</p>
+                        <p class="text-xs text-secondary mb-0">testimonials-section</p>
                       </td>
                       <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Michael Levi</h6>
-                          </div>
-                        </div>
+                        <p class="text-xs font-weight-bold mb-0">What Our Clients Say</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">michael@creative-tim.com</p>
+                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-2" alt="section-image">
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8903</p>
+                        <p class="text-xs font-weight-bold mb-0" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                          Read testimonials from our satisfied clients...
+                        </p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">321 Elm St, City</p>
+                        <p class="text-xs font-weight-bold mb-0">Client Testimonials | Reviews</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">testimonials</p>
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR004')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR004" checked
-                            onchange="toggleStatus('USR004', this.checked)">
-                        </div>
+                        <span class="badge badge-sm bg-gradient-success">Active</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR004')">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit section" onclick="editHomePageSection('testimonials-section')">
                           <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete section" onclick="deleteHomePageSection('testimonials-section')">
+                          <i class="fas fa-trash"></i> Delete
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">04/10/2024</p>
+                        <p class="text-xs font-weight-bold mb-0">Contact Section</p>
+                        <p class="text-xs text-secondary mb-0">contact-section</p>
                       </td>
                       <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Richard Gran</h6>
-                          </div>
-                        </div>
+                        <p class="text-xs font-weight-bold mb-0">Get In Touch</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">richard@creative-tim.com</p>
+                        <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-2" alt="section-image">
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8904</p>
+                        <p class="text-xs font-weight-bold mb-0" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                          Contact us for any inquiries or support...
+                        </p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">654 Maple Dr, City</p>
+                        <p class="text-xs font-weight-bold mb-0">Contact Us | Reach Out</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">contact</p>
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR005')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR005"
-                            onchange="toggleStatus('USR005', this.checked)">
-                        </div>
+                        <span class="badge badge-sm bg-gradient-success">Active</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR005')">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit section" onclick="editHomePageSection('contact-section')">
                           <i class="fas fa-edit"></i> Edit
                         </a>
-                      </td>
-                    </tr>
-                    <tr>
-                     
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">14/09/2024</p>
-                      </td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user6">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Miriam Eric</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">miriam@creative-tim.com</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8905</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">987 Cedar Ln, City</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR006')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR006"
-                            onchange="toggleStatus('USR006', this.checked)">
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR006')">
-                          <i class="fas fa-edit"></i> Edit
+                        <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete section" onclick="deleteHomePageSection('contact-section')">
+                          <i class="fas fa-trash"></i> Delete
                         </a>
                       </td>
                     </tr>
@@ -747,6 +666,7 @@
       </footer>
     </div>
   </main>
+
   <div class="fixed-plugin">
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="fa fa-cog py-2"> </i>
