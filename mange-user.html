@@ -5,9 +5,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <!-- <link rel="icon" type="image/png" href="../assets/img/favicon.png"> -->
   <title>
-    Soft UI Dashboard 3 by Creative Tim
+   Astro radisance 
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800" rel="stylesheet" />
@@ -34,6 +34,7 @@
 
 <body class="g-sidenav-show  bg-gray-100">
   <!-- Sidebar -->
+
   <aside class="sidenav  navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
     id="sidenav-main">
     <div class="sidenav-header">
@@ -79,8 +80,8 @@
 
         <!-- User Management -->
         <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="collapse" href="#userManagement" role="button"
-            aria-expanded="false" aria-controls="userManagement">
+          <a class="nav-link collapsed" data-bs-toggle="collapse" href="#userManagement" role="button" aria-expanded="false"
+            aria-controls="userManagement">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fas fa-users text-dark opacity-8"></i>
@@ -89,7 +90,7 @@
           </a>
           <div class="collapse" id="userManagement">
             <ul class="nav ms-4 ps-3">
-
+              
               <li class="nav-item">
                 <a class="nav-link text-xs" href="./add-user.html">
                   <span class="nav-link-text">Add User</span>
@@ -100,15 +101,15 @@
                   <span class="nav-link-text">View User</span>
                 </a>
               </li>
-
+             
             </ul>
           </div>
         </li>
 
         <!-- Manage Pages -->
         <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="collapse" href="#managePages" role="button"
-            aria-expanded="false" aria-controls="managePages">
+          <a class="nav-link collapsed" data-bs-toggle="collapse" href="#managePages" role="button" aria-expanded="false"
+            aria-controls="managePages">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fas fa-file-alt text-dark opacity-8"></i>
@@ -118,8 +119,8 @@
           <div class="collapse" id="managePages">
             <ul class="nav ms-4 ps-3">
               <li class="nav-item">
-                <a class="nav-link text-xs" href="./home-page-section.html">
-                  <span class="nav-link-text">Home Page Section</span>
+                <a class="nav-link text-xs" href="./home-page.html">
+                  <span class="nav-link-text">Home Page</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -211,17 +212,19 @@
         href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree">Upgrade to pro</a>
     </div> -->
   </aside>
+
+
+
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-      navbar-scroll="true">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Manage Users</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+         
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -362,18 +365,15 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+              <h5 class="modal-title" id="editUserModalLabel">Manage Users</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form id="editUserForm">
                 <div class="row">
+                 
                   <div class="col-md-6 mb-3">
-                    <label class="form-label text-sm font-weight-bold">User ID</label>
-                    <input type="text" class="form-control" id="editUserId" name="userId" readonly>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label class="form-label text-sm font-weight-bold">Registration Date <span class="text-danger">*</span></label>
+                    <label class="form-label text-sm font-weight-bold">Date <span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="editRegistrationDate" name="registrationDate" required>
                   </div>
                   <div class="col-md-6 mb-3">
@@ -426,7 +426,7 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Users List</h6>
+              <h6>Manage Users</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -434,7 +434,7 @@
                   <thead>
                     <tr>
                       <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">UserID</th> -->
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Registration
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                         Date</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
@@ -484,222 +484,13 @@
                         </div>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs border p-1 border-primary rounded-circle text-primary" data-toggle="tooltip"
                           data-original-title="Edit user" onclick="editUser('USR001')">
-                          <i class="fas fa-edit"></i> Edit
+                          <i class="fas fa-edit text-primary"></i> 
                         </a>
                       </td>
                     </tr>
-                    <tr>
-                      
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">11/01/2024</p>
-                      </td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Alexa Liras</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">alexa@creative-tim.com</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8901</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">456 Oak Ave, City</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR002')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR002"
-                            onchange="toggleStatus('USR002', this.checked)">
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR002')">
-                          <i class="fas fa-edit"></i> Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                     
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">19/09/2024</p>
-                      </td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Laurent Perrier</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">laurent@creative-tim.com</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8902</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">789 Pine Rd, City</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR003')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR003" checked
-                            onchange="toggleStatus('USR003', this.checked)">
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR003')">
-                          <i class="fas fa-edit"></i> Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">24/12/2024</p>
-                      </td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Michael Levi</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">michael@creative-tim.com</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8903</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">321 Elm St, City</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR004')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR004" checked
-                            onchange="toggleStatus('USR004', this.checked)">
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR004')">
-                          <i class="fas fa-edit"></i> Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">04/10/2024</p>
-                      </td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Richard Gran</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">richard@creative-tim.com</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8904</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">654 Maple Dr, City</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR005')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR005"
-                            onchange="toggleStatus('USR005', this.checked)">
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR005')">
-                          <i class="fas fa-edit"></i> Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                     
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">14/09/2024</p>
-                      </td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user6">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Miriam Eric</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">miriam@creative-tim.com</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">+1 234 567 8905</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">987 Cedar Ln, City</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm btn-outline-primary mb-0" onclick="changePassword('USR006')">
-                          <i class="fas fa-key"></i> Change
-                        </button>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="form-check form-switch d-inline-block">
-                          <input class="form-check-input" type="checkbox" id="statusUSR006"
-                            onchange="toggleStatus('USR006', this.checked)">
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user" onclick="editUser('USR006')">
-                          <i class="fas fa-edit"></i> Edit
-                        </a>
-                      </td>
-                    </tr>
+                   
                   </tbody>
                 </table>
               </div>
